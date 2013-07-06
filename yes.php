@@ -1,5 +1,5 @@
 <?php 
-$name=$_POST['name']; 
+$name=preg_replace('\W*', '', $_POST['name']); 
 $name = strtolower($name);
 $contents=file_get_contents("./awesomestate/$name.awesome");
 
